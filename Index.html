@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio ke Lirik</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Implementasi Audio ke Lirik</h1>
+  </header>
+
+  <main>
+    <section class="upload-section">
+      <label for="audioFile">Pilih file audio (mp3/wav):</label>
+      <input type="file" id="audioFile" accept="audio/*">
+
+      <button id="transcribeBtn">Transkrip Sekarang</button>
+    </section>
+
+    <section class="result-section">
+      <h2>Hasil Lirik</h2>
+      <div id="resultArea"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Proyek Audio ke Lirik - OpenAI Whisper API</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
