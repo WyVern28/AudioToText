@@ -3,32 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Audio ke Lirik</title>
+  <title>Audio To Text</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Audio Transcriber Powered By AssemblyAI</h1>
-  </header>
-
-  <main>
-    <section class="upload-section">
-      <label for="audioFile">Pilih file audio (mp3/wav):</label>
+  <div class="container">
+    <div class="page active" id="page1">
+      <h1>Audio To Text</h1>
+      
+      <div class="upload-box" onclick="document.getElementById('audioFile').click()">
+        <label for="audioFile">Choose your files</label>
+        <div class="file-name" id="fileName"></div>
+      </div>
       <input type="file" id="audioFile" accept="audio/*">
 
-      <button id="transcribeBtn">Transkrip Sekarang</button>
-    </section>
+      <button class="btn-transkrip" id="transcribeBtn">Transkrip</button>
+    </div>
 
-    <section class="result-section">
-      <h2>Hasil Lirik</h2>
-      <div id="resultArea"></div>
-    </section>
-  </main>
-
-  <footer>
-    <p>Audio Transcriber by AssemblyAI</p>
-  </footer>
-
+    <div class="page" id="page2">
+      <div class="page-2-content">
+        <button class="btn-back" id="backBtn">
+          <span>←</span>
+          <span>Back</span>
+        </button>
+        <h1 class="page-2-header">Audio To Text</h1>
+        <p class="subtitle">This is the transcript</p>
+        <div class="result-box" id="resultBox">Menunggu hasil transkripsi...</div>
+      </div>
+    </div>
+  </div>
   <script src="script.js"></script>
 </body>
 </html>
